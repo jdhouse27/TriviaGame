@@ -1,7 +1,31 @@
 body {
-    background-image: url("./assets/images/old_baseball_mitt.jpg")
+    background-image: url("../images/glove_bg_01.jpg");
+    background-repeat: no-repeat;
 }
 
 .jumbotron {
+    background-color: bisque;
+    width: 760px;
+    height: 500px;
+    margin-top: 5%;
+}
 
+.btn-group-vertical {
+    margin: 10px;
+    padding: 5px;
+    width: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.timer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 1.5em,
 }
