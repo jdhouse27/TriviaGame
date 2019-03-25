@@ -29,6 +29,7 @@ $(document).ready(function() {
  //   $(".timer").html("<p>Time Remaining: " + timeleft + "</p>");
  //   
  // }
+ function questionTime (){
   var timeleft = 20;
   var timer = setInterval(function(questiontimer){
     $(".timer").html("<p>Time Remaining: " + timeleft + "</p>");
@@ -38,7 +39,7 @@ $(document).ready(function() {
       
     }
   }, 1000);
-
+  };
 //wait timer between questions
 
 function waitTimer(){
@@ -51,6 +52,7 @@ function waitTimer(){
   }, 1000);
 };
 
+//question 1
 function question1(){
   var guessOne = "Pete Rose";
   var guessTwo = "Babe Ruth";
@@ -62,24 +64,28 @@ function question1(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-   
-    $("button").click(function(guess){
-      if (answer = guessOne){
-        correctAnswer ++;
-          waitTimer();
-          question2();
-          console.log("HIT");
-      
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question2();
-          console.log("STRIKE");
-          };
-    });
+    questionTime();
 
+//question 1 click function
+$("button").click(function(){
+  var guess = $(this).text();
+  console.log(guess);
+  if (guess === "Pete Rose"){
+    correctAnswer ++;
+      waitTimer();
+      question2();
+      console.log("HIT");
+  
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question2();
+      console.log("STRIKE");
+      };
+});
 };
 
+//question 2
 function question2(){
   var guessOne = "Ken Griffey Jr.";
   var guessTwo = "Babe Ruth";
@@ -91,23 +97,28 @@ function question2(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-     
-    $("button").click(function(guess){
-      if (answer = guessThree){ 
-        correctAnswer ++;
-          waitTimer();
-          question3();
-          console.log("HIT");
+    questionTime();
+
+//question 2 click function
+$("button").click(function(){
+  var guess = $(this).text();
     
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question3();
-          console.log("STRIKE");
-          };
-      });
+  if (guess === "Barry Bonds"){
+    correctAnswer ++;
+      waitTimer();
+      question3();
+      console.log("HIT");
+  
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question3();
+      console.log("STRIKE");
+      };
+});
 };
 
+//question 3
 function question3(){
   var guessOne = "Otis Amos";
   var guessTwo = "Rickey Henderson";
@@ -119,25 +130,28 @@ function question3(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-   
-    
-    $("button").click(function(guess){
-      if (answer = guessTwo){ 
-        correctAnswer ++;
-          waitTimer();
-          question4();
-          console.log("HIT");
-    
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question4();
-          console.log("STRIKE");
-          };
-      });
+    questionTime();
+  
+//question 3 click function    
+$("button").click(function(guess){
+  var guess = $(this).text();
+  
+  if (guess === "Rickey Henderson"){
+    correctAnswer ++;
+      waitTimer();
+      question4();
+      console.log("HIT");
 
-}
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question4();
+      console.log("STRIKE");
+      };
+});
+};
 
+//question 4
 function question4(){
   var guessOne = "Nolan Ryan";
   var guessTwo = "Babe Ruth";
@@ -149,23 +163,27 @@ function question4(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-      
-    $("button").click(function(guess){
-      if (answer = guessOne){ 
-        correctAnswer ++;
-          waitTimer();
-          question5();
-          console.log("HIT");
-    
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question5();
-          console.log("STRIKE");
-          };
-      });
-}
+    questionTime();
+     
+//question 4 click function   
+$("button").click(function(guess){
+  var guess = $(this).text();
+  if (guess === "Nolan Ryan"){
+    correctAnswer ++;
+      waitTimer();
+      question5();
+      console.log("HIT");
 
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question5();
+      console.log("STRIKE");
+      };
+  });
+}; 
+
+//question 5
 function question5(){
   var guessOne = "Roger Marris";
   var guessTwo = "Babe Ruth";
@@ -177,25 +195,27 @@ function question5(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
+    questionTime();
    
-    
-    $("button").click(function(guess){
-      if (answer = guessFour){ 
-        correctAnswer ++;
-          waitTimer();
-          question6();
-          console.log("HIT");
-    
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question6();
-          console.log("STRIKE");
-          };
-      });
+//question 5 click function  
+$("button").click(function(guess){
+  var guess = $(this).text();
+  if (guess === "Barry Bonds"){
+    correctAnswer ++;
+      waitTimer();
+      question6();
+      console.log("HIT");
 
-}
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question6();
+      console.log("STRIKE");
+      };
+  });
+};
 
+//question 6
 function question6(){
   var guessOne = "Brett Saberhagen";
   var guessTwo = "Ty Cobb";
@@ -207,24 +227,27 @@ function question6(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-   
-    $("button").click(function(guess){
-      if (answer = guessThree){ 
-        correctAnswer ++;
-          waitTimer();
-          question7();
-          console.log("HIT");
-    
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question7();
-          console.log("STRIKE");
-          };
-      });
+    questionTime();
+  
+//question 6 click function
+$("button").click(function(guess){
+  var guess = $(this).text();
+  if (guess === "Nolan Ryan"){
+    correctAnswer ++;
+      waitTimer();
+      question7();
+      console.log("HIT");
 
-}
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question7();
+      console.log("STRIKE");
+      };
+  });
+};
 
+//question 7 
 function question7(){
   var guessOne = "New York Yankees";
   var guessTwo = "St. Louis Cardinals";
@@ -236,23 +259,27 @@ function question7(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-   
-    $("button").click(function(guess){
-      if (answer = guessOne){ 
-        correctAnswer ++;
-          waitTimer();
-          question8();
-          console.log("HIT");
-    
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question8();
-          console.log("STRIKE");
-          };
-      });
-}
+    questionTime();
 
+//question 7 click function   
+$("button").click(function(guess){
+  var guess = $(this).text();
+  if (guess === "New York Yankees"){
+    correctAnswer ++;
+      waitTimer();
+      question8();
+      console.log("HIT");
+
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question8();
+      console.log("STRIKE");
+      };
+  });
+};
+
+//question 8
 function question8(){
   var guessOne = "George Brett";
   var guessTwo = "Babe Ruth";
@@ -264,23 +291,27 @@ function question8(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-   
-    $("button").click(function(guess){
-      if (answer = guessThree){ 
-        correctAnswer ++;
-          waitTimer();
-          question9();
-          console.log("HIT");
-    
-        } else {
-          wrongAnswer ++;
-          waitTimer();
-          question9();
-          console.log("STRIKE");
-          };
-      });
-}
+    questionTime();
 
+//question 8 click function  
+$("button").click(function(guess){
+  var guess = $(this).text();
+  if (guess === "Cal Ripken Jr"){
+    correctAnswer ++;
+      waitTimer();
+      question9();
+      console.log("HIT");
+
+    } else {
+      wrongAnswer ++;
+      waitTimer();
+      question9();
+      console.log("STRIKE");
+      };
+  });
+};
+
+//question 9
 function question9(){
   var guessOne = "1";
   var guessTwo = "21";
@@ -292,17 +323,19 @@ function question9(){
     $(".answer2").text(guessTwo);
     $(".answer3").text(guessThree);
     $(".answer4").text(guessFour);
-   
-    $("button").click(function(guess){
-      if (answer = guessThree){ 
-        correctAnswer ++;
-          waitTimer();
-          console.log("HIT");
-      } else {
-          wrongAnswer ++
-          waitTimer();
-          console.log("STRIKE");
-          };
-      });
+    questionTime();
 
+//question 9 click function  
+$("button").click(function(guess){
+  var guess = $(this).text();
+  if (guess === "42"){
+    correctAnswer ++;
+      waitTimer();
+      console.log("HIT");
+  } else {
+      wrongAnswer ++
+      waitTimer();
+      console.log("STRIKE");
+      };
+  });
 };
